@@ -30,7 +30,16 @@ export const VideoContainer = ({ url, setupPlayer, start, setupError }: VideoCon
 			<ReactPlayer
 				ref={playerRef}
 				url={url}
-				playing={playing}
+                playing={playing}
+                config={{
+                    file: {
+                        tracks: [
+                            { kind: 'subtitles', src: 'subs/subtitles.en.vtt', srcLang: 'en', default: true },
+                            { kind: 'subtitles', src: 'subs/subtitles.ja.vtt', srcLang: 'ja' },
+                            { kind: 'subtitles', src: 'subs/subtitles.de.vtt', srcLang: 'de' }
+                        ]
+                    }
+                }}
 				controls={true}
 				width='100%'
 				height='95%'
