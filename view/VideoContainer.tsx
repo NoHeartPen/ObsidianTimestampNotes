@@ -39,7 +39,8 @@ export const VideoContainer = ({ url, setupPlayer, start, setupError }: VideoCon
                             { kind: 'subtitles', src: 'subs/subtitles.de.vtt', srcLang: 'de' }
                         ]
                     }
-                }}
+                }
+				console.log({url})
 				controls={true}
 				width='100%'
 				height='95%'
